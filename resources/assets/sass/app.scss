@@ -1,2 +1,9 @@
-// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+ @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+ @import 'layout/module';
+ @import 'pages/module';
+ @import 'components/module';
+ @import 'base/module';
+ body{
+ background:#EFEFEF;
+ }
 

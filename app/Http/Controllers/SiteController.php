@@ -9,10 +9,10 @@ use App\Http\Requests;
 class SiteController extends Controller
 {
     public function showHome(){
-    	return view('home');
+    	return view('pages.home');
     }
 
      public function showPost($slug){
-    	return view('post');
+    	return view('pages.post');
     }
 }
