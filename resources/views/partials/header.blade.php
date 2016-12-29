@@ -6,6 +6,7 @@
 
         <ul class="nav navbar-nav navbar-right">
 
+                <li><a href="/subscribe">Subscribe</a></li>
             @if (Auth::user())
 
                 <li><a href="/logout">Logout</a></li>
