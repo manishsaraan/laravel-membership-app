@@ -1,45 +1,37 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Laravel</title>
+@extends('layouts.app')
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+@section('content')
+<div class="container">
+    <artical class="card post-single">
+                   <!-- image -->
+      <div class="img-container" style="background-image: url('{{$post->image}}')">
 
-        <style>
-            html, body {
-                height: 100%;
-            }
+      </div>
+                   <!-- card cotnent -->
+     <div class="card-content">
 
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
+                   <!-- title -->
+     <header class="post-header">
+         <h1>{{$post->title}}</h1>
 
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
+            <!-- byline -->
+         <div class="byline">
+             {{$post->author->name}}
+         </div>
+     </header>
 
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
 
-            .title {
-                font-size: 96px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Show Posts Here</div>
-            </div>
-        </div>
-    </body>
-</html>
+
+
+                   <!-- show of hide if premium post -->
+
+
+                   <!-- content -->
+
+                   {!! $post->content !!}
+
+      </div>
+    </artical>
+</div>
+
+@endsection('content')

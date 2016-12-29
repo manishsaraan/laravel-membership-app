@@ -14,6 +14,8 @@ class SiteController extends Controller
     }
 
      public function showPost($slug){
-    	return view('pages.post');
+     	$post = Post::where('slug',$slug)->with('author')->first();
+
+    	return view('pages.post',compact('post'));
     }
 }
