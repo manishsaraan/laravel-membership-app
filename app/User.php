@@ -1,7 +1,7 @@
 <?php
 
 namespace App;
-
+use Laravel\Cashier\Billable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
@@ -11,6 +11,7 @@ class User extends Authenticatable
      *
      * @var array
      */
+    use billable;
     protected $fillable = [
         'name', 'email', 'password',
     ];
