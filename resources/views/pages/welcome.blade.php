@@ -1,45 +1,24 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Laravel</title>
+@extends('layouts.app')
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
-
-        <style>
-            html, body {
-                height: 100%;
-            }
-
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
-
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
-
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
-            .title {
-                font-size: 96px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Laravel 5</div>
+@section('content')
+<div class="hero">
+    <div class="hero-content">
+       <h1>Welcome To Our App!</h1>
+       <p>You are going to love it!</p>
+    </div>
+</div>
+<section class="container">
+    <div class="section-header">
+              <h2>Premium Posts</h2>
+    </div>
+     <p class="text-center lead">You now have access to these premium posts!</p>
+     <!-- Posts Goes Here -->
+         <div class="row">
+          @foreach($posts as $post)
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                   @include('partials.post-card',['post'=>$post])
             </div>
-        </div>
-    </body>
-</html>
+          @endforeach
+         </div>
+</section>
+@endsection

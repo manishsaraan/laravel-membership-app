@@ -11,6 +11,7 @@
 <div class="container">
 	<div class="card card-padded">
 	<form action="/subscribe" method="post" id="subscribe-form">
+	{!! csrf_field() !!}
 		<!-- User Information -->
       @if(Auth::guest())
 		<div class="section-header">
@@ -106,7 +107,13 @@
                    </div>
                    <!-- stripe errors -->
                    <div class="stripe-errros ">
-
+                         @if(count($errors) > 0)
+                           <div class="alert alert-danger">
+                                    @foreach($errors->all() as $error)
+                                        {{ $error }}<br>
+                                    @endforeach
+                           </div>
+                         @endif
                    </div>
                    <!-- submit button -->
                    <div class="form-group text-center">
