@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Laravel</title>
-
+        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
         <link href="css/app.css" rel="stylesheet" type="text/css">
 
     </head>
@@ -11,12 +11,12 @@
          <div id="site-header">
             @include("partials.header")
          </div>
-         
+
         <!-- Main -->
         <main id="site-main">
              @yield('content')
         </main>
-               
+
          <!-- Footer -->
          <div id="site-footer">
            @include('partials.footer')
