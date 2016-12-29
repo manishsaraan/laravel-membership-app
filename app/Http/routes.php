@@ -4,11 +4,15 @@
 //site routes
 
 Route::get('/','SiteController@showHome');
-Route::get('{slug}','SiteController@showPost');
-//authentication routes
 
+//authentication routes
+Route::auth();
 
 //subscription routes
 
 
 //account routes
+
+
+//single post
+Route::get('{slug}','SiteController@showPost');
